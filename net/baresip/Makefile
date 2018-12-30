@@ -128,7 +128,7 @@ define Package/baresip/install
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/baresip.init $(1)/etc/init.d/baresip
 	$(INSTALL_DIR) $(STAGING_DIR)/usr/include
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/usr/include/baresip.h $(STAGING_DIR)/usr/include/baresip.h
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/include/baresip.h $(STAGING_DIR)/usr/include/baresip.h
 	$(INSTALL_DIR) $(STAGING_DIR)/usr/lib
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/libbaresip.{a,so} $(STAGING_DIR)/usr/lib
 endef
