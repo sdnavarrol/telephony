@@ -108,7 +108,7 @@ MAKE_FLAGS+= \
 	RELEASE=1 \
 	SYSROOT="$(shell $(FIND) $(TOOLCHAIN_DIR) -path '*/include/pthread.h' | sed -ne '1s|/include/pthread.h||p')" \
 	SYSROOT_ALT="$(STAGING_DIR)/usr" \
-	$(BARESIP_MOD_OPTIONS)
+	$(BARESIP_MOD_OPTIONS) libbaresip.a libbaresip.so
 
 TARGET_CFLAGS+=-D_GNU_SOURCE
 
